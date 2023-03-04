@@ -1,0 +1,153 @@
+.main-nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  z-index: 7;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  font-family: $secondary-font;
+  text-transform: uppercase;
+  background-color: $secondary-color;
+
+  div:nth-child(2) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+#nav-logo {
+  font-size: 1rem;
+  padding: 1rem 0 1rem 2rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+#nav-logo:hover {
+  color: $primary-color;
+}
+
+.menu {
+  padding: 0;
+  margin: 0;
+	background-color: transparent;
+	display: flex;
+	font-size: 1.2rem;
+	height: auto;
+	width: auto;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+
+  li {
+    padding: 0 1rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.2em;
+    z-index: 10;
+  }
+
+  a {
+		color: $tertiary-color;
+
+		&:hover {
+			color: $secondary-color;
+		}
+  }
+}
+
+.left-side-social {
+  display: none;
+}
+
+#top-button {
+  display: none;
+}
+
+@media only screen and (min-width: 1024px) {
+  .main-nav {
+		display: flex;
+    top: 0;
+    right: 0;
+    bottom: auto;
+    z-index: 6;
+    width: 50%;
+    justify-content: end;
+    align-items: center;
+    padding: 3.1% 3rem;
+    color: $tertiary-color;
+    background-color: $primary-color;
+
+    a {
+      padding-left: 3px;
+
+			&:hover {
+				color: $secondary-color;
+				border-bottom: 2px solid;
+				padding-bottom: 3px;
+			}
+    }
+  }
+
+  #nav-logo {
+    display: none;
+  }
+
+  .left-side-social {
+    display: flex;
+    flex-direction: column;
+		align-items: center;
+    position: fixed;
+    left: 2%;
+    right: auto;
+    top: 28%;
+    z-index: 10;
+    width: 40px;
+    margin: 0;
+    font-size: 1.8rem;
+    color: $tertiary-color;
+
+    a {
+      padding: 1rem 0;
+
+			&:hover {
+				color: $secondary-color;
+			}
+    }
+  }
+
+  #top-button {
+    display: flex;
+    position: fixed;
+		background-color: transparent;
+    right: 2%;
+    bottom: 3%;
+    border: 2px dotted $secondary-color;
+    border-radius: 100%;
+		margin: 0;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+		align-items: center;
+		justify-content: center;
+		opacity: 0.6;
+
+		&:hover {
+			opacity: 1;
+		}
+
+		&:hover > #top-arrow {
+			color: $secondary-color;
+		}
+
+		#top-arrow {
+			color: $tertiary-color;
+			font-size: 1.3rem;
+		}
+  }
+}
+
+@media screen and (min-width: 1400px) {
+	.main-nav {
+    padding: 2.4% 3rem;
+	}
+}
